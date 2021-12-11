@@ -80,7 +80,7 @@ function isValid(input){
 
 /**
  * check the validity of an input number
- * @this {isValid}
+ * @this {isInRange}
  * @param {HTMLFormElement} input l'input à tester
  * @return {void}                 affiche un message d'erreur ou non
  */
