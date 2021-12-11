@@ -139,9 +139,12 @@ function validate(){
   isValid(firstname);
   isValid(lastname);
   isValid(email);
-  isValid(quantity);
+  isInRange(quantity);
   isValid(birthdate);
   isOneRadioCheck();
   isChecked(checkbox1);
-  return validities.get('firstName') && validities.get('lastName') && validities.get('email') && validities.get('quantity') && validities.get('birthdate') && validities.get('locations') && validities.get('checkbox1');
+  return validities.get('firstName') && validities.get('lastName')
+  && validities.get('email') && validities.get('quantity')
+  && validities.get('birthdate') && validities.get('locations')
+  && validities.get('checkbox1');
 }
