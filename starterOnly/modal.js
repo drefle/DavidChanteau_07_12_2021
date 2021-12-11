@@ -79,6 +79,23 @@ function isValid(input){
 }
 
 /**
+ * check the validity of an input number
+ * @this {isValid}
+ * @param {HTMLFormElement} input l'input à tester
+ * @return {void}                 affiche un message d'erreur ou non
+ */
+function isInRange(input){
+  if(input.validity.rangeOverflow || input.validity.rangeUnderflow || !input.value){
+    input.parentNode.setAttribute('data-error-visible',true);
+    validities.set(input.name,false);
+  }
+  else{
+    input.parentNode.setAttribute('data-error-visible',false);
+    validities.set(input.name,true);
+  }
+}
+
+/**
  * check if a checkbox is checked
  * @this {isChecked}
  * @param {HTMLFormElement} checkbox checkbox à tester
